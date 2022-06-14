@@ -1,5 +1,5 @@
 x=int(input())
-f=1
+f=0
 while x!=1:
     if x%2==0:
         x=x//2
@@ -8,9 +8,10 @@ while x!=1:
     elif x%5==0:
         x=x//5
     else:
-        f=0
+        f=1
         break
-if f==0:
+        
+if f==1:
     print('Not Ugly Number')
 else:
     print('Ugly Number')
