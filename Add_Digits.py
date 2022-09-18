@@ -1,10 +1,8 @@
-x=int(input())
-s=0
-while x>0:
-    r=x%10
-    s+=r
-    x=x//10
-    if s>9 and x==0:
-        x=s
-        s=0
-print(s)
+def add(n,s):
+    if (n == 0 and s<10):
+        return s
+    if (s>9 and n ==0):
+        return add(s,0)
+    return add(n//10,s+n%10)
+x = int(input())
+print(add(x,0))
